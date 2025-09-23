@@ -1,0 +1,26 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    width: 50%;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.cell1 {
+    background-color: lightgreen;
+}
+
+.cell2 {
+    background-color: lightcoral;
+}
+
+@media (max-width: 600px) {
+    td {
+        display: block;
+        width: 100%;
+    }
+}
