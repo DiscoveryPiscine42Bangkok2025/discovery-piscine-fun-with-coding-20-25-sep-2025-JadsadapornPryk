@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>To do list</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            color: #fff;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        button {
+            padding: 12px 24px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #fff;
+            color: #333;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #f0f0f0;
+            transform: translateY(-2px);
+        }
+
+        #ft_list {
+            margin-top: 25px;
+            background: #ffffffcc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            padding: 15px;
+            width: 320px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        #ft_list div {
+            background: #66a6ff;
+            color: #fff;
+            font-weight: 500;
+            border-radius: 6px;
+            padding: 10px 12px;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        #ft_list div:hover {
+            background: #4d8ae9;
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>To do list</h1>
+    <button onclick="newToDo()">➕ New</button>
+    <div id="ft_list"></div>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>
