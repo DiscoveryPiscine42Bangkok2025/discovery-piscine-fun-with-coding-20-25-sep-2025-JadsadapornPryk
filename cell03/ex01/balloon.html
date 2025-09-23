@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>balloon</title>
+    <style>
+        html,body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            background: red;
+            border-radius: 50%;
+            cursor: pointer;
+            user-select: none;
+            transition: width 120ms, height 120ms, background-color 120ms;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="balloon" aria-label="balloon"></div>
+
+    <script>
+        (() => {
+            const balloon = document.getElementById('balloon');
+
+            const MIN_SIZE = 200;
+            const MAX_SIZE = 420;
+            const CLICK_STEP = 10;
+            const LEAVE_STEP = 5;
+
+            const COLORS = ['red', 'green', 'blue'];
+            let colorIndex = 0;
+            let size = MIN_SIZE;
+
+            function render() {
+                balloon.style.width = size + 'px';
+                balloon.style.height = size + 'px';
+                balloon.style.backgroundColor = COLORS[colorIndex];
+            }
+
+            function nextColor() {
+                colorIndex = (colorIndex + 1) % COLORS.length;
+            }
+
+            function prevColor() {
+                colorIndex = (colorIndex - 1 + COLORS.length) % COLORS.length;
+            }
+
+            balloon.addEventListener('click', () => {
+                size += CLICK_STEP;
+                nextColor();
+
+                if (size > MAX_SIZE) {
+                    size = MIN_SIZE;
+                }
+                render();
+            });
+
+
+            balloon.addEventListener('mouseleave', () => {
+
+                size = Math.max(MIN_SIZE, size - LEAVE_STEP);
+                prevColor();
+                render();
+            });
+
+
+            render();
+        })();
+    </script>
+</body>
+
+
+</html>
