@@ -1,0 +1,36 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg1 {
+    background-image: url("https://cdn.wallpapersafari.com/72/26/fVpc1S.jpg");
+}
+
+.bg2 {
+    background-image: url("https://mcdn.wallpapersafari.com/medium/89/51/E706hp.jpg");
+}
+
+.section.black {
+    background: black;
+    color: white;
+    padding: 100px 20px;
+    text-align: center;
+}
