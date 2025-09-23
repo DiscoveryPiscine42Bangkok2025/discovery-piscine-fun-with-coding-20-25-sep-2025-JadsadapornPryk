@@ -1,1 +1,55 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(216, 179, 130);
+}
 
+.nav ul {
+    list-style: none;
+    background-color: rgb(73, 45, 3);
+    text-align: center;
+    padding: 0;
+    margin: 0;
+
+}
+
+.nav li {
+    font-size: 40px;
+    position: relative;
+}
+
+.nav li li {
+    font-size: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding-left: 15px;
+    border-bottom: 1px solid black;
+    transition: .3s;
+}
+
+.nav a:hover {
+    background-color: rgb(50, 31, 2);
+}
+
+.nav a {
+    border-bottom: none;
+
+}
+
+.nav li ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 200px;
+    text-align: center;
+}
+
+.nav li:hover ul {
+    display: block;
+}
