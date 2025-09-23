@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <title>calc.html</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{
+      --bg: #f6f7fb;
+      --card: #ffffff;
+      --text: #111827;
+      --ring:#3b82f6;
+      --border:#e5e7eb;
+    }
+
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: radial-gradient(1200px 800px at 80% -20%, #eaf2ff 0%, transparent 60%),
+                  radial-gradient(900px 700px at -10% 120%, #fdeef5 0%, transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      display:grid;
+      place-items:center;
+      padding:24px;
+    }
+
+    .card{
+      width: min(700px, 92vw);
+      background: var(--card);
+      border:1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,.06);
+      border-radius: 20px;
+      padding: 28px;
+    }
+
+    form{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:center;
+    }
+
+    .field, select, .btn{
+      padding:12px 14px;
+      font-size:16px;
+      border-radius: 12px;
+      border:1px solid var(--border);
+      background:#fff;
+      outline: none;
+      transition: box-shadow .15s ease, border-color .15s ease, transform .02s ease;
+    }
+    .field{ width:150px; }
+    select{ width:70px; }
+    .field:focus, select:focus{
+      border-color: var(--ring);
+      box-shadow: 0 0 0 4px color-mix(in oklab, var(--ring) 20%, transparent);
+    }
+
+    .btn{
+      background: var(--text);
+      color:#fff;
+      cursor:pointer;
+      border:1px solid var(--text);
+      padding:12px 18px;
+    }
+    .btn:hover{ transform: translateY(-1px); }
+    .btn:active{ transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <section class="card">
+    <form id="calc">
+      <input id="left"  class="field" type="text" placeholder="Num1" inputmode="numeric" pattern="\d+">
+      <select id="op" aria-label="operator">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+        <option>%</option>
+      </select>
+      <input id="right" class="field" type="text" placeholder="Num2" inputmode="numeric" pattern="\d+">
+      <input type="submit" class="btn" value="Try me!">
+    </form>
+  </section>
+
+  <script>
+    setInterval(() => alert('Please, use me...'), 30000);
+
+    document.getElementById('calc').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const leftStr  = document.getElementById('left').value.trim();
+      const rightStr = document.getElementById('right').value.trim();
+      const op       = document.getElementById('op').value;
+
+      if (!/^\d+$/.test(leftStr) || !/^\d+$/.test(rightStr)) {
+        alert('Error :(');
+        console.log('Error :(');
+        return;
+      }
+
+      const a = parseInt(leftStr, 10);
+      const b = parseInt(rightStr, 10);
+
+      if ((op === '/' || op === '%') && b === 0) {
+        alert("It's over 9000!");
+        console.log("It's over 9000!");
+        return;
+      }
+
+      let result;
+      switch (op) {
+        case '+': result = a + b; break;
+        case '-': result = a - b; break;
+        case '*': result = a * b; break;
+        case '/': result = a / b; break;
+        case '%': result = a % b; break;
+      }
+
+      alert(result);
+      console.log(result);
+    });
+  </script>
+
+</body>
+</html>
