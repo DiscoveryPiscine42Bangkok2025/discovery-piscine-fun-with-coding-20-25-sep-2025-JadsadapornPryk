@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, .1);
+    width: 300px;
+}
+
+.card-Title {
+    text-align: center;
+    font-size: 25px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.card-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.info td {
+    text-align: center;
+    border: none;
+    padding: 6px 4px;
+}
+
+.login p {
+    color: #a8a8a8;
+    margin: 0;
+}
+
+.name h2,
+.desc p {
+    margin: 0;
+}
+
+.social img {
+    margin: 0 6px;
+    vertical-align: middle;
+}
+
+.Contact-Button {
+    display: block;
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
