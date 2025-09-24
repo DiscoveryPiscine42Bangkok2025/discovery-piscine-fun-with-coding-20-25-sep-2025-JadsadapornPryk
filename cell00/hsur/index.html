@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio (2 คน)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="description" content="Portfolio สองคน: Frontend (Jadsadaporn) & Data Analyst (Nontawat) — รวมผลงานเด่น ลิงก์ GitHub และช่องทางติดต่อ">
+  <link rel="icon" href="images/favicon.png">
+</head>
+<body>
+  <!-- radio สำหรับสลับโปรไฟล์ (อยู่นอก header) -->
+  <input type="radio" name="person" id="p1" class="tab-input" checked>
+  <input type="radio" name="person" id="p2" class="tab-input">
+
+  <header class="site-header">
+    <div class="container header-wrap">
+      <h1 class="brand">PORTFOLIO <span class="muted">/ POND AND MAN </span></h1>
+
+      <div class="people-switch" role="tablist" aria-label="เลือกโปรไฟล์">
+        <label for="p1" role="tab" aria-controls="panel-p1">Jadsadaporn P.</label>
+        <label for="p2" role="tab" aria-controls="panel-p2">Nontawat D.</label>
+        <span class="pill" aria-hidden="true"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- ===== Profile A ===== -->
+    <section id="panel-p1" class="panel" role="tabpanel" aria-labelledby="p1">
+      <section class="hero">
+        <div class="hero-left">
+          <h2 class="title">สวัสดีครับ ผม <span class="accent">Jadsadaporn Pariyakan</span></h2>
+          <p class="subtitle">Student • KMITL</p>
+          <p class="bio">
+            นักศึกษาปี 1 คณะบริหารธุรกิจ สาขาเศรษฐศาสตร์
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#p1-projects">ดูผลงาน</a>
+            <a class="btn ghost" href="#p1-contact">ติดต่อ</a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <figure class="avatar">
+            <img src="images/IMG_6829.jpg"
+                 alt="Jadsadaporn Pariyakan — Frontend Developer"
+                 width="440" height="440" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </section><!-- END .hero -->
+
+      <section class="cards trio">
+        <article class="card">
+          <h3>ทักษะเด่น</h3>
+          <ul class="skill-list">
+            <li><span>คำนวณ</span><progress max="100" value="95" aria-label="HTML/CSS 95%"></progress></li>
+            <li><span>ร้องเพลง</span><progress max="100" value="90" aria-label="JS/TS 90%"></progress></li>
+            <li><span>การวางแผน</span><progress max="100" value="85" aria-label="Figma/A11y 85%"></progress></li>
+            <li><span>เล่นเกมเก่ง</span><progress max="100" value="85" aria-label="Figma/A11y 85%"></progress></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>จุดเด่น</h3>
+          <ul class="tick">
+            <li>เคยชนะการแข่งขันวิชาคณิตศาสตร์ของโรงเรียน</li>
+            <li>วางแผนในการทำสิ่งต่างๆเก่ง</li>
+            <li>เคยชนะการแข่งขันเกมระดับจังหวัด</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="p1-projects" class="projects">
+        <h3>ผลงานคัดสรร</h3>
+        <div class="grid">
+          <article class="project">
+            <div class="thumb ratio"></div>
+            <div class="project-body">
+              <h4>ชนะการแข่งขันคณิตศาสตร์</h4>
+              <p>ได้แชมป์การแข่งขันคณิตศาสตร์ของโรงเรียนสารสาสน์วิเทศมีนบุรี</p>
+          </article>
+          <article class="project">
+            <div class="thumb ratio"></div>
+            <div class="project-body">
+              <h4>ลายมือสวย</h4>
+              <p>ได้แชมป์แข่งคัดลายมือของโรงเรียนสารสาสน์วิเทศมีนบุรี</p>
+          </article>
+          <article class="project">
+            <div class="thumb ratio"></div>
+            <div class="project-body">
+              <h4>Reach the immortal</h4>
+              <p>Reaching immortal 2 in valorant</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="timeline">
+        <h3>สถานที่ศึกษา</h3>
+        <ol class="steps">
+          <li>
+            <div class="when">ปัจจุบัน</div>
+            <div class="what"><strong>KMITL</strong> @ Business — Econ</div>
+          </li>
+          <li>
+            <div class="when">2008-2024</div>
+            <div class="what"><strong>Sarasas Witaed Minburi</div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="p1-contact" class="contact">
+        <h3>สามารถติดต่อได้ที่ช่องทาง</h3>
+        <ul class="contact-list">
+          <!-- Gmail A -->
+          <li>
+            <a class="gmail" href="mailto:mavwpond@gmail.com" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M22 6.5v11.1c0 .9-.7 1.6-1.6 1.6H3.6A1.6 1.6 0 0 1 2 17.6V6.5l10 7.1 10-7.1Zm-1.6-3.1c.9 0 1.6.7 1.6 1.6v.5L12 12.6 2 5.5v-.5c0-.9.7-1.6 1.6-1.6h16.8Z"/>
+              </svg>
+              mavwpond@gmail.com
+            </a>
+          </li>
+
+          <!-- GitHub A -->
+          <li>
+            <a class="github" href="https://github.com/JadsadapornPryk" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 .5C5.7.5.9 5.3.9 11.6c0 4.9 3.2 9.1 7.7 10.6.6.1.8-.2.8-.5 0-.2 0-.9 0-1.7-3.1.7-3.8-1.3-3.8-1.3-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.5.1-3.2 0 0 .9-.3 3 .1.9-.2 1.9-.3 2.8-.3s1.9.1 2.8.3c2.1-.4 3-.1 3-.1.6 1.7.2 2.9.1 3.2.7.8 1.1 1.8 1.1 2.9 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2.1 0 1.6 0 2.9 0 3.3 0 .3.2.6.8.5 4.5-1.5 7.7-5.7 7.7-10.6C23.1 5.3 18.3.5 12 .5Z"/>
+              </svg>
+              GitHub
+            </a>
+          </li>
+
+            <a class="ig" href="https://www.instagram.com/mavwpond/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.4.6.6.3 1.1.7 1.6 1.2.5.5.9 1 1.2 1.6.3.5.5 1.2.6 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.6 2.4a4.4 4.4 0 0 1-2.8 2.8c-.5.3-1.2.5-2.4.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.4-.6A4.4 4.4 0 0 1 2.9 19c-.3-.5-.5-1.2-.6-2.4C2.2 15.3 2.2 14.9 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.6-2.4.3-.6.7-1.1 1.2-1.6.5-.5 1-.9 1.6-1.2.5-.3 1.2-.5 2.4-.6C8.4 2.2 8.8 2.2 12 2.2Z"/>
+              </svg>
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+
+    <!-- ===== Profile B ===== -->
+    <section id="panel-p2" class="panel" role="tabpanel" aria-labelledby="p2">
+      <section class="hero">
+        <div class="hero-left">
+          <h2 class="title">สวัสดีครับ ผมคือ <span class="accent">Nontawat Daungpang</span></h2>
+          <p class="subtitle">Student • KMITL</p>
+          <p class="bio">
+            นักศึกษาปี 1 คณะบริหารธุรกิจ สาขาเศรษฐศาสตร์
+          </p>
+          <div class="cta">
+            <a class="btn primary" href="#p2-projects">ดูเคสศึกษา</a>
+            <a class="btn ghost" href="#p2-contact">ติดต่อ</a>
+          </div>
+        </div>
+        <div class="hero-right">
+          <figure class="avatar">
+            <!-- เปลี่ยนชื่อไฟล์ให้ตรงกับของจริง -->
+            <img src="images/IMG_6977.jpg"
+                 alt="Nontawat Daungpang — Data Analyst"
+                 width="440" height="440" loading="lazy" decoding="async">
+          </figure>
+        </div>
+      </section><!-- END .hero -->
+
+      <section class="cards duo">
+        <article class="card">
+          <h3>ทักษะเด่น</h3>
+          </div>
+          <ul class="skill-list">
+            <li><span>เล่นกีฬา</span><progress max="100" value="90"></progress></li>
+            <li><span>คำนวณ</span><progress max="100" value="92"></progress></li>
+            <li><span>มีความเป็นผู้นำ</span><progress max="100" value="88"></progress></li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>จุดเด่น</h3>
+          <ul class="tick">
+            <li>ชอบเล่นกีฬา</li>
+            <li>นิสัยทะเร้น</li>
+            <li>ชอบทำตัวแตกต่าง</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="p2-projects" class="projects">
+        <h3>ผลงาน</h3>
+        <div class="grid">
+          <article class="project">
+            <div class="thumb ratio"></div>
+            <div class="project-body">
+              <h4>เล่นกีฬาเก่ง</h4>
+              <p>ชนะการแข่งขันวอลเลย์ของโรงเรียน</p>
+          </article>
+          <article class="project">
+            <div class="thumb ratio"></div>
+            <div class="project-body">
+              <h4>เป็นคุณครูสอนเพื่อนๆในสาขา</h4>
+              <p>สอนคณิตศาสตร์เพื่อนตอนใกล้สอบ</p>
+          </article>
+          <article class="project">
+            <div class="thumb ratio"></div>
+            <div class="project-body">
+              <h4>ทำจิตอาสา ทำความดี</h4>
+              <p>ทำจิตสาขาบ่อย</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="timeline">
+        <h3>สถานที่ศึกษา</h3>
+        <ol class="steps">
+          <li>
+             <div class="when">ปัจจุบัน</div>
+            <div class="what"><strong>KMITL</strong> @ Business — Econ</div>
+          </li>
+          <li>
+            <div class="when">2009-2024
+            <div class="what"><strong>@ Pathumthep Witthayakarn </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="p2-contact" class="contact">
+        <h3>ติดต่อ</h3>
+        <ul class="contact-list">
+          <!-- Gmail B -->
+          <li>
+            <a class="gmail" href="mailto:68100357@kmitl.ac.th" aria-label="Email">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M22 6.5v11.1c0 .9-.7 1.6-1.6 1.6H3.6A1.6 1.6 0 0 1 2 17.6V6.5l10 7.1 10-7.1Zm-1.6-3.1c.9 0 1.6.7 1.6 1.6v.5L12 12.6 2 5.5v-.5c0-.9.7-1.6 1.6-1.6h16.8Z"/>
+              </svg>
+              68100357@kmitl.ac.th
+            </a>
+          </li>
+
+          <!-- GitHub B -->
+          <li>
+            <a class="github" href="https://github.com/68100357" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 .5C5.7.5.9 5.3.9 11.6c0 4.9 3.2 9.1 7.7 10.6.6.1.8-.2.8-.5 0-.2 0-.9 0-1.7-3.1.7-3.8-1.3-3.8-1.3-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.5-.3-5.1-1.2-5.1-5.5 0-1.2.4-2.1 1.1-2.9-.1-.3-.5-1.5.1-3.2 0 0 .9-.3 3 .1.9-.2 1.9-.3 2.8-.3s1.9.1 2.8.3c2.1-.4 3-.1 3-.1.6 1.7.2 2.9.1 3.2.7.8 1.1 1.8 1.1 2.9 0 4.3-2.6 5.2-5.1 5.5.4.3.8 1 .8 2.1 0 1.6 0 2.9 0 3.3 0 .3.2.6.8.5 4.5-1.5 7.7-5.7 7.7-10.6C23.1 5.3 18.3.5 12 .5Z"/>
+              </svg>
+              GitHub
+            </a>
+          </li>
+
+          <!-- Instagram B -->
+          <li>
+            <a class="ig" href="https://www.instagram.com/khunnoomanu/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.9.3 2.4.6.6.3 1.1.7 1.6 1.2.5.5.9 1 1.2 1.6.3.5.5 1.2.6 2.4.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.9-.6 2.4a4.4 4.4 0 0 1-2.8 2.8c-.5.3-1.2.5-2.4.6-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.9-.3-2.4-.6A4.4 4.4 0 0 1 2.9 19c-.3-.5-.5-1.2-.6-2.4C2.2 15.3 2.2 14.9 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.9.6-2.4.3-.6.7-1.1 1.2-1.6.5-.5 1-.9 1.6-1.2.5-.3 1.2-.5 2.4-.6C8.4 2.2 8.8 2.2 12 2.2Z"/>
+              </svg>
+              Instagram
+            </a>
+          </li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Two-People Portfolio. สร้างด้วย HTML + CSS (ไม่มี JS)</small>
+    </div>
+  </footer>
+</body>
+</html>
